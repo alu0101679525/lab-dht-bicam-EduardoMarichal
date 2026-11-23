@@ -117,7 +117,7 @@ public class Particle extends Generator {
 		    }
 			return newCode;
 	    }
-		 else{                                                  //c·lculo de la posicion para codificacion binaria
+		 else{                                                  //c√°lculo de la posicion para codificacion binaria
 			  for (int i = 0; i < stateActual.getCode().size(); i++){
 				  double rand = (double)(Math.random() * (double)(1));
 				  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 

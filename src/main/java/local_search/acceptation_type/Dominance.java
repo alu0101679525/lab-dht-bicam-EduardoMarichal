@@ -10,13 +10,13 @@ import problem.definition.State;
 
 public class Dominance {
 
-	//---------------------------------M閠odos que se utilizan en los algoritmos multiobjetivo-------------------------------------------------------//
-	//Funci髇 que determina si la soluci髇 X domina a alguna de las soluciones no dominadas de una lista
+	//---------------------------------M茅todos que se utilizan en los algoritmos multiobjetivo-------------------------------------------------------//
+	//Funci贸n que determina si la soluci贸n X domina a alguna de las soluciones no dominadas de una lista
 	//Devuelve la lista actualizada y true si fue adicionada a la lista o false de lo contrario
 	public boolean ListDominance(State solutionX, List<State> list){
 		boolean domain = false;
 		for (int i = 0; i < list.size() && domain == false; i++) {
-			//Si la soluci髇 X domina a la soluci髇 de la lista
+			//Si la soluci贸n X domina a la soluci贸n de la lista
 			if(dominance(solutionX, list.get(i)) == true){
 				//Se elimina el elemento de la lista
 				list.remove(i);
@@ -34,17 +34,17 @@ public class Dominance {
 			}
 
 		}
-		//Si la soluci髇 X no fue dominada
+		//Si la soluci贸n X no fue dominada
 		if(domain == false){
-			//Comprobando que la soluci髇 no exista
+			//Comprobando que la soluci贸n no exista
 			boolean found = false;
 			for (int k = 0; k < list.size() && found == false; k++) {
 				State element = list.get(k);
 				found = solutionX.Comparator(element);
 			}
-			//Si la soluci髇 no existe
+			//Si la soluci贸n no existe
 			if(found == false){
-				//Se guarda la soluci髇 candidata en la lista de soluciones 髉timas de Pareto
+				//Se guarda la soluci贸n candidata en la lista de soluciones 贸ptimas de Pareto
 				list.add(solutionX.clone());
 				if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)) {
 					MultiobjectiveHillClimbingDistance.DistanceCalculateAdd(list);
@@ -58,7 +58,7 @@ public class Dominance {
 		List<State> deletedSolution = new ArrayList<State>();
 		for (int i = 0; i < list.size() && domain == false; i++) {
 			State element = list.get(i);
-			//Si la soluci髇 X domina a la soluci髇 de la lista
+			//Si la soluci贸n X domina a la soluci贸n de la lista
 			if(dominance(solutionX, element) == true){
 				//Se elimina el elemento de la lista
 				deletedSolution.add(element);
@@ -67,20 +67,20 @@ public class Dominance {
 				domain = true;
 			}
 		}
-		//Si la soluci髇 X no fue dominada
+		//Si la soluci贸n X no fue dominada
 		if(domain == false){
-			//Comprobando que la soluci髇 no exista
+			//Comprobando que la soluci贸n no exista
 			boolean found = false;
 			for (int k = 0; k < list.size() && found == false; k++) {
 				State element = list.get(k);
 				found = solutionX.Comparator(element);
 			}
-			//Si la soluci髇 no existe
+			//Si la soluci贸n no existe
 			if(found == false){
 
-				//Se eliminan de la lista de soluciones optimas de pareto aquellas que fueron dominadas por la soluci髇 candidata
+				//Se eliminan de la lista de soluciones optimas de pareto aquellas que fueron dominadas por la soluci贸n candidata
 				list.removeAll(deletedSolution);
-				//Se guarda la soluci髇 candidata en la lista de soluciones 髉timas de Pareto
+				//Se guarda la soluci贸n candidata en la lista de soluciones 贸ptimas de Pareto
 				list.add(solutionX.clone());
 				if(Strategy.getStrategy().getProblem()!= null){
 					Strategy.getStrategy().listRefPoblacFinal = list;
@@ -93,7 +93,7 @@ public class Dominance {
 	}
 
 
-	//Funci髇 que devuelve true si solutionX domina a solutionY
+	//Funci贸n que devuelve true si solutionX domina a solutionY
 	public boolean dominance(State solutionX,  State solutionY)	{
 		boolean dominance = false;
 		int countBest = 0;

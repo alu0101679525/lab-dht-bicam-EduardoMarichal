@@ -47,8 +47,8 @@ public class Strategy {
 	
 	public boolean saveListStates; //guardar lista de estados generados
 	public boolean saveListBestStates; // guardar lista con los mejores estados encontrados en cada iteracion
-	public boolean saveFreneParetoMonoObjetivo; //guardar lista de soluciones no dominadas de una ejecuci髇
-	public boolean calculateTime; // calcular tiempo de ejecuci髇 de un algoritmo
+	public boolean saveFreneParetoMonoObjetivo; //guardar lista de soluciones no dominadas de una ejecuci贸n
+	public boolean calculateTime; // calcular tiempo de ejecuci贸n de un algoritmo
 	
 	//calculo del Tiempo inicial y final
 	long initialTime;
@@ -120,7 +120,7 @@ public class Strategy {
 		
 		float sumMax = 0; // suma acumulativa para almacenar la evaluacion de la mejor solucion encotrada y calcular el OfflinePerformance
 		int countOff = 0; // variable par contar los OfflinePerformance que se van salvando en el arreglo
-		//ciclio de ejecuci髇 del algoritmo
+		//ciclio de ejecuci贸n del algoritmo
 		while (!stopexecute.stopIterations(countCurrent, countmaxIterations)){
 			//si se detecta un cambio
 			if(countCurrent == countChange){
@@ -142,7 +142,7 @@ public class Strategy {
 						MultiGenerator.activeGenerator.countBetterGender = 0;
 					}
 					updateWeight();//actualizar el peso de los generadores si se reinician cuando ocurre un cambio
-					//generar el estado candidato de la iteraci髇
+					//generar el estado candidato de la iteraci贸n
 					stateCandidate = multiGenerator.generate(operatornumber);
 					problem.Evaluate(stateCandidate);
 					stateCandidate.setEvaluation(stateCandidate.getEvaluation());

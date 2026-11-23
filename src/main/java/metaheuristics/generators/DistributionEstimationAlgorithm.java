@@ -54,7 +54,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 	
 	public DistributionEstimationAlgorithm() {
 		super();
-		this.referenceList = getListStateRef(); // llamada al método que devuelve la lista. 
+		this.referenceList = getListStateRef(); // llamada al mÃ©todo que devuelve la lista. 
 //		this.selectionType = SelectionType.Truncation;
 		//this.replaceType = ReplaceType.Generational;
 //		this.replaceType = ReplaceType.Smallest;
