@@ -30,7 +30,7 @@ public class Strategy {
 	private static Strategy strategy = null;
 	private State bestState;
 	private Problem problem = new Problem();
-	public SortedMap<GeneratorType, Generator> mapGenerators;
+	public SortedMap<GeneratorType, Generator> mapGenerators = new TreeMap<GeneratorType, Generator>();
 	private StopExecute stopexecute;
 	private UpdateParameter updateparameter;
 	private IFFactoryGenerator ifFactoryGenerator;
@@ -296,6 +296,12 @@ public class Strategy {
 	}
 
 	public State getBestState() {
+		if (bestState == null) {
+			bestState = new State();
+			ArrayList<Double> eval = new ArrayList<Double>();
+			eval.add(0.0);
+			bestState.setEvaluation(eval);
+		}
 		return bestState;
 	}
 
@@ -339,6 +345,9 @@ public class Strategy {
 
 	public ArrayList<String> getListKey(){
 		ArrayList<String> listKeys = new ArrayList<String>();
+		if (mapGenerators == null || mapGenerators.isEmpty()) {
+			return listKeys;
+		}
 		String key = mapGenerators.keySet().toString();
 		String returnString = key.substring(1, key.length() - 1);
 		returnString = returnString + ", ";

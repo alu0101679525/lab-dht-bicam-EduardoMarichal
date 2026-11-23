@@ -54,8 +54,10 @@ public class CandidateValue {
 		//Problem problem = ExecuteGenerator.getExecuteGenerator().getProblem();
 		State stateCandidate;
 		List<State> auxList = new ArrayList<State>();
-		for (int i = 0; i < neighborhood.size(); i++) {
-			auxList.add(neighborhood.get(i));
+		if (neighborhood != null) {
+			for (int i = 0; i < neighborhood.size(); i++) {
+				auxList.add(neighborhood.get(i));
+			}
 		}
 		this.tabusolution = new TabuSolutions();
 		if (strategy.equals(StrategyType.TABU)) {

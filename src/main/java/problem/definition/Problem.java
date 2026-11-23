@@ -14,11 +14,24 @@ public class Problem {
 
 	public enum ProblemType {Maximizar,Minimizar;}
 
+	private static class DefaultOperator extends Operator {
+		@Override
+		public java.util.List<State> generatedNewState(State stateCurrent, Integer operatornumber) {
+			return new ArrayList<State>();
+		}
+		@Override
+		public java.util.List<State> generateRandomState(Integer operatornumber) {
+			ArrayList<State> list = new ArrayList<State>();
+			list.add(new State());
+			return list;
+		}
+	}
+
 	private ArrayList<ObjetiveFunction> function = new ArrayList<ObjetiveFunction>();
 	private State state = new State();
 	private ProblemType typeProblem = ProblemType.Maximizar;
 	private Codification codification;
-	private Operator operator;
+	private Operator operator = new DefaultOperator();
 	private int possibleValue;
 	private TypeSolutionMethod typeSolutionMethod;
 	private IFFactorySolutionMethod factorySolutionMethod;
@@ -58,6 +71,9 @@ public class Problem {
 	}
 
 	public Operator getOperator() {
+		if (operator == null) {
+			operator = new DefaultOperator();
+		}
 		return operator;
 	}
 
