@@ -11,7 +11,7 @@ import metaheurictics.strategy.Strategy;
 import problem.definition.Problem.ProblemType;
 import problem.definition.State;
 
-public class MultiGenerator extends Generator {
+public class MultiGenerator extends Generator implements Cloneable {
 
 	private GeneratorType Generatortype;
 	private static Generator[] listGenerators = new Generator[GeneratorType.values().length];
@@ -130,7 +130,7 @@ public class MultiGenerator extends Generator {
 				stateCandidate.setTypeGenerator(generator.getType());
 				listGeneratedPP.add(stateCandidate);
 			} catch (Exception e) {
-				e.printStackTrace();
+				java.util.logging.Logger.getLogger(MultiGenerator.class.getName()).log(java.util.logging.Level.WARNING, "Error al generar estado");
 			} 
 			j++;
 		}
@@ -284,7 +284,7 @@ public class MultiGenerator extends Generator {
 			limitRoulette.setGenerator(listGenerators[i]);
 			listLimit.add(limitRoulette);
 		}
-		float numbAleatory = (float) (Math.random() * (double)(1));
+		float numbAleatory = (float) config.RandomUtil.nextDouble();
 		boolean find = false;
 		int i = 0;
 		while ((find == false) && (i < listLimit.size())){

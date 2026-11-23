@@ -1,5 +1,6 @@
 package evolutionary_algorithms.complement;
 
+import config.RandomUtil;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class RouletteSelection extends FatherSelection {
 		}
 		List<State> fatherList = new ArrayList<State>();
 		for (int j = 0; j < listState.size(); j++) {
-			float numbAleatory = (float) (Math.random() * (double)(1));
+			float numbAleatory = (float) RandomUtil.nextDouble();
 			boolean find = false;
 			int i = 0;
 			while ((find == false) && (i < listLimit.size())){

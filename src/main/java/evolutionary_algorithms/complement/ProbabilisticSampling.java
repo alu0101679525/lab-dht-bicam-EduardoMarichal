@@ -1,20 +1,17 @@
 package evolutionary_algorithms.complement;
 
-
+import config.RandomUtil;
 import java.util.ArrayList;
 import java.util.List;
 
 import metaheurictics.strategy.Strategy;
 import metaheuristics.generators.GeneratorType;
-
 import problem.definition.State;
-
 
 public class ProbabilisticSampling extends Sampling {
 
 	@Override
 	public List<State> sampling(List<State> fathers, int countInd) {
-		// TODO Auto-generated method stub
 		int cantV = fathers.get(0).getCode().size();
 		List<State> staList = listState(countInd);
 		for (int i = 0; i < cantV; i++) {
@@ -47,7 +44,7 @@ public class ProbabilisticSampling extends Sampling {
 			for (int l = 0; l < countInd; l++) {
 				boolean find = false;
 				int p = 0;
-				int random = (int)(Math.random() * (double)(sum)) + 1;
+				int random = sum > 0 ? RandomUtil.nextInt(sum) + 1 : 1;
 				while (p < arrOcc.length && find == false) {
 					random = random - arrOcc[p];
 					if(random <= 0){
@@ -57,7 +54,8 @@ public class ProbabilisticSampling extends Sampling {
 					else p++;
 				}
 				if(find == false){
-					int value = new Integer((int)(Math.random() * (double)(Strategy.getStrategy().getProblem().getCodification().getVariableCount() * 10)));
+					int maxBound = Strategy.getStrategy().getProblem().getCodification().getVariableCount() * 10;
+					int value = maxBound > 0 ? RandomUtil.nextInt(maxBound) : 0;
 					staList.get(l).getCode().add(value);
 				}
 				

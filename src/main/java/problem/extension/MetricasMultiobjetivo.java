@@ -1,18 +1,16 @@
 package problem.extension;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import jxl.read.biff.BiffException;
 import problem.definition.State;
 
 public class MetricasMultiobjetivo {
 
 // % de soluciones q no son miembros del frente de pareto verdadero
-	public double TasaError(List<State> solutionsFPcurrent, List<State> solutionsFPtrue) throws BiffException, IOException{
+	public double TasaError(List<State> solutionsFPcurrent, List<State> solutionsFPtrue) {
 		float tasaError = 0;
 		for (int i = 0; i < solutionsFPcurrent.size() ; i++) { // frente de pareto actual
 			State solutionVO = solutionsFPcurrent.get(i);
@@ -26,7 +24,7 @@ public class MetricasMultiobjetivo {
 	}
 	
 // % Indica  qué  tan  lejos  están  los  elementos  del frente  de  Pareto  actual  respecto  al  frente  de  Pareto  verdadero	
-	public double DistanciaGeneracional(List<State> solutionsFPcurrent, List<State> solutionsFPtrue) throws BiffException, IOException{
+	public double DistanciaGeneracional(List<State> solutionsFPcurrent, List<State> solutionsFPtrue) {
 		float min = 1000;
 		float distancia = 0;
 		float distanciaGeneracional = 0;
@@ -52,7 +50,7 @@ public class MetricasMultiobjetivo {
 		return total;
 	}
 
-	public double Dispersion(ArrayList<State> solutions) throws BiffException, IOException{
+	public double Dispersion(ArrayList<State> solutions) {
 		//Soluciones obtenidas con la ejecución del algoritmo X
 		LinkedList<Float> distancias = new LinkedList<Float>();
 		float distancia = 0;

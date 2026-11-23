@@ -4,14 +4,11 @@
 
 package local_search.candidate_type;
 
-
+import config.RandomUtil;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import problem.definition.State;
-
-
-
 
 public class GreaterCandidate extends SearchCandidate {
 	
@@ -20,7 +17,7 @@ public class GreaterCandidate extends SearchCandidate {
 		State stateGreater = null;
 		if(listNeighborhood.size() > 1){
 			double counter = 0;
-			double currentCount = listNeighborhood.get(0).getEvaluation().get(0);;
+			double currentCount = listNeighborhood.get(0).getEvaluation().get(0);
 			for (int i = 1; i < listNeighborhood.size(); i++) {
 				counter = listNeighborhood.get(i).getEvaluation().get(0);
 				if (counter > currentCount) {
@@ -30,7 +27,8 @@ public class GreaterCandidate extends SearchCandidate {
 				counter = 0;
 			}
 			if(stateGreater == null){
-				int pos = (int)(Math.random() * (double)(listNeighborhood.size() - 1));
+				int bound = listNeighborhood.size();
+				int pos = bound > 0 ? RandomUtil.nextInt(bound) : 0;
 				stateGreater = listNeighborhood.get(pos);
 			}
 		}

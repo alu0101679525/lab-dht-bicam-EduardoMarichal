@@ -72,8 +72,8 @@ public class Particle extends Generator {
 	
 	private ArrayList<Object> UpdateVelocity(){ // actualizar velocidad
     	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.countCurrentIterPSO;  //CALCULO DE LA INERCIA
-    	double rand1 = (double)(Math.random() * (double)(1));
-    	double rand2 = (double)(Math.random() * (double)(1));
+    	double rand1 = config.RandomUtil.nextDouble();
+    	double rand2 = config.RandomUtil.nextDouble();
     	double inertia, cognitive, social;
     	int learning = ParticleSwarmOptimization.learning1 + ParticleSwarmOptimization.learning2; // ratios de aprendizaje cognitivo y social
     	ParticleSwarmOptimization.constriction = 2/(Math.abs(2 - learning-Math.sqrt((learning * learning)- 4 * learning)));   // Factor de costriccion
@@ -119,7 +119,7 @@ public class Particle extends Generator {
 	    }
 		 else{                                                  //cálculo de la posicion para codificacion binaria
 			  for (int i = 0; i < stateActual.getCode().size(); i++){
-				  double rand = (double)(Math.random() * (double)(1));
+				  double rand = config.RandomUtil.nextDouble();
 				  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 
 				  if (rand < s){
 				     binaryCode.add(1);

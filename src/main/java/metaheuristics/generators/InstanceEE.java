@@ -1,9 +1,12 @@
 package metaheuristics.generators;
 
 import factory_method.FactoryGenerator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class InstanceEE implements Runnable {
 
+	private static final Logger LOGGER = Logger.getLogger(InstanceEE.class.getName());
 	private boolean terminate = false;
 	
 	public void run() {
@@ -12,8 +15,7 @@ public class InstanceEE implements Runnable {
 		try {
 			generatorEE = ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "Error al crear generador EE");
 		}
 		boolean find = false;
 		int i = 0;

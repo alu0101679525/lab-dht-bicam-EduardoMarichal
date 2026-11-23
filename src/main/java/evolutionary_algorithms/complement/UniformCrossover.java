@@ -1,17 +1,14 @@
 package evolutionary_algorithms.complement;
 
-import metaheurictics.strategy.Strategy;
-
+import config.RandomUtil;
 import problem.definition.State;
 
 public class UniformCrossover extends Crossover {
 	
-	
 	public int[] mascara(int length){
 		int[] mascara = new int[length];
 		for (int i = 0; i < mascara.length; i++) {
-			int value = (int)(Math.random() * (int)(2));
-			mascara[0] = value;
+			mascara[i] = RandomUtil.nextInt(2);
 		}
 		return mascara;
 	}	

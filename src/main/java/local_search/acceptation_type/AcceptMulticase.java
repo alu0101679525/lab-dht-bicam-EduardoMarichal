@@ -1,11 +1,10 @@
 package local_search.acceptation_type;
 
+import config.RandomUtil;
 import metaheuristics.generators.*;
 import metaheurictics.strategy.*;
 
 import java.util.List;
-import java.util.Random;
-
 import problem.definition.State;
 
 public class AcceptMulticase extends AcceptableCandidate {
@@ -21,7 +20,6 @@ public class AcceptMulticase extends AcceptableCandidate {
 		}
 		Double T = MultiCaseSimulatedAnnealing.tinitial;
 		double pAccept = 0;
-		Random rdm = new Random();
 		Dominance dominance= new Dominance();
 		//Verificando si la solución candidata domina a la solución actual
 		//Si la solución candidata domina a la solución actual
@@ -71,7 +69,7 @@ public class AcceptMulticase extends AcceptableCandidate {
 			}
 		}
 		//Generar un número aleatorio
-		if((rdm.nextFloat()) < pAccept){
+		if(RandomUtil.nextDouble() < pAccept){
 			stateCurrent = stateCandidate.clone();
 			//Verificando que la solución candidata domina a alguna de las soluciones
 			accept = dominance.ListDominance(stateCandidate, list);

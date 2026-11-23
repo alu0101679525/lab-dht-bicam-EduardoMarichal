@@ -1,10 +1,12 @@
 package metaheuristics.generators;
 
 import factory_method.FactoryGenerator;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class InstanceGA implements Runnable {
 
+	private static final Logger LOGGER = Logger.getLogger(InstanceGA.class.getName());
 	private boolean terminate = false;
 	
 	public void run() {
@@ -13,7 +15,7 @@ public class InstanceGA implements Runnable {
 		try {
 			generatorGA = ifFactoryGenerator.createGenerator(GeneratorType.GeneticAlgorithm);
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.log(Level.WARNING, "Error al crear generador GA");
 		}
 		boolean find = false;
 		int i = 0;

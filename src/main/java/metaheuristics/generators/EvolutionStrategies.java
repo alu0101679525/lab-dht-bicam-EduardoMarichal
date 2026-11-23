@@ -68,7 +68,7 @@ public class EvolutionStrategies extends Generator {
     	iffatherselection = new FactoryFatherSelection();
     	FatherSelection selection = iffatherselection.createSelectFather(selectionType);
     	List<State> fathers = selection.selection(this.listStateReference, truncation);
-    	int pos1 = (int)(Math.random() * fathers.size());
+    	int pos1 = fathers.size() > 0 ? config.RandomUtil.nextInt(fathers.size()) : 0;
     	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();
     	candidate.setCode(new ArrayList<Object>(fathers.get(pos1).getCode()));
     	candidate.setEvaluation(fathers.get(pos1).getEvaluation());
