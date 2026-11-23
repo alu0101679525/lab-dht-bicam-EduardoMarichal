@@ -14,9 +14,9 @@ public class Problem {
 
 	public enum ProblemType {Maximizar,Minimizar;}
 
-	private ArrayList<ObjetiveFunction> function;
-	private State state;
-	private ProblemType typeProblem;
+	private ArrayList<ObjetiveFunction> function = new ArrayList<ObjetiveFunction>();
+	private State state = new State();
+	private ProblemType typeProblem = ProblemType.Maximizar;
 	private Codification codification;
 	private Operator operator;
 	private int possibleValue;

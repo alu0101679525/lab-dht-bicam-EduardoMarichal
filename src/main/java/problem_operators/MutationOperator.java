@@ -13,6 +13,9 @@ public class MutationOperator extends Operator {
 
 	public List<State> generatedNewState(State stateCurrent, Integer operatornumber){
 		List<State> listNeigborhood = new ArrayList<State>();
+		if (Strategy.getStrategy().getProblem() == null || Strategy.getStrategy().getProblem().getCodification() == null) {
+			return listNeigborhood;
+		}
 		for (int i = 0; i < operatornumber; i++){
 			int key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();
 			Object candidate = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue(key);

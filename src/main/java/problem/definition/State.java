@@ -81,12 +81,12 @@ public class State implements Cloneable {
 		return result;
 	}
 	public double Distance(State state){
-		double distancia = 0;
+		int distancia = 0;
 		for (int i = 0; i < state.getCode().size(); i++) {
 			if (!(state.getCode().get(i).equals(this.getCode().get(i)))) {
 				distancia++;
 			}
 		}
-	return distancia;
+		return distancia;
 	}
 }

@@ -11,14 +11,14 @@ public class MetricasMultiobjetivo {
 
 // % de soluciones q no son miembros del frente de pareto verdadero
 	public double TasaError(List<State> solutionsFPcurrent, List<State> solutionsFPtrue) {
-		float tasaError = 0;
+		int tasaError = 0;
 		for (int i = 0; i < solutionsFPcurrent.size() ; i++) { // frente de pareto actual
 			State solutionVO = solutionsFPcurrent.get(i);
 			if(!Contains(solutionVO, solutionsFPtrue)){ // no esta en el frente de pareto verdadero 
 				tasaError++;
 			}
 		}
-		double total = tasaError/solutionsFPcurrent.size();
+		double total = (double) tasaError / solutionsFPcurrent.size();
 		//System.out.println(solutionsFP.size() + "/" + solutions.size() + "/" + total);
 		return total;
 	}

@@ -77,7 +77,9 @@ public class TabuSearch extends Generator {
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//ArrayList<State>list=new ArrayList<State>();
 		List<State> neighborhood = new ArrayList<State>();
-		neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceTS, operatornumber);
+		if (Strategy.getStrategy().getProblem() != null && Strategy.getStrategy().getProblem().getOperator() != null) {
+			neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceTS, operatornumber);
+		}
 	    State statecandidate = candidatevalue.stateCandidate(stateReferenceTS, typeCandidate, strategy, operatornumber, neighborhood);
 	   // list.add(statecandidate);
 	    return statecandidate;

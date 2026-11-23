@@ -78,13 +78,17 @@ public class Particle extends Generator {
     	int learning = ParticleSwarmOptimization.learning1 + ParticleSwarmOptimization.learning2; // ratios de aprendizaje cognitivo y social
     	ParticleSwarmOptimization.constriction = 2/(Math.abs(2 - learning-Math.sqrt((learning * learning)- 4 * learning)));   // Factor de costriccion
     	ArrayList<Object> actualVelocity = new ArrayList<Object>();
+    	int codeSize = 0;
+    	if (Strategy.getStrategy().getProblem() != null && Strategy.getStrategy().getProblem().getState() != null && Strategy.getStrategy().getProblem().getState().getCode() != null) {
+    		codeSize = Strategy.getStrategy().getProblem().getState().getCode().size();
+    	}
     	if(velocity.isEmpty()){
-    		for (int i = 0; i < Strategy.getStrategy().getProblem().getState().getCode().size(); i++){
+    		for (int i = 0; i < codeSize; i++){
     			velocity.add(0.0);
     		}
     	}
     	// recorre el vector velocidad y lo actualiza
-    	for (int i = 0; i < Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  
+    	for (int i = 0; i < codeSize; i++) {  
     		// cumulo donde se encuentra la particula
     		int swarm = ParticleSwarmOptimization.countParticle / ParticleSwarmOptimization.countParticleBySwarm; 
            	inertia = w * (Double)velocity.get(i);  

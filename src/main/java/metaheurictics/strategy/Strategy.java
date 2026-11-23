@@ -29,7 +29,7 @@ public class Strategy {
 
 	private static Strategy strategy = null;
 	private State bestState;
-	private Problem problem;
+	private Problem problem = new Problem();
 	public SortedMap<GeneratorType, Generator> mapGenerators;
 	private StopExecute stopexecute;
 	private UpdateParameter updateparameter;
@@ -327,6 +327,9 @@ public class Strategy {
 	}
 
 	public Problem getProblem() {
+		if (problem == null) {
+			problem = new Problem();
+		}
 		return problem;
 	}
 

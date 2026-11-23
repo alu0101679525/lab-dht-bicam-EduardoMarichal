@@ -21,6 +21,9 @@ public class TowPointsMutation extends Mutation {
 
 	@Override
 	public State mutation(State newind, double PM) {
+		if (Strategy.getStrategy().getProblem() == null || Strategy.getStrategy().getProblem().getCodification() == null) {
+			return newind;
+		}
 		Object key1 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();
 		Object key2 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();
 		Object value1 = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer) key1);

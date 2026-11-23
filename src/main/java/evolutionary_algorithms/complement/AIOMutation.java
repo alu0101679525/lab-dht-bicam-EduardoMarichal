@@ -16,7 +16,9 @@ public class AIOMutation extends Mutation {
 
 	@Override
 	public State mutation(State state, double PM) {
-		// TODO Auto-generated method stub
+		if (state == null || state.getCode() == null || Strategy.getStrategy().getProblem() == null || Strategy.getStrategy().getProblem().getCodification() == null) {
+			return state;
+		}
 		int key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey(); //seleccionar aleatoriamente una ciudad
 		int key1 = 0;
 		boolean found = false;
@@ -64,8 +66,10 @@ public class AIOMutation extends Mutation {
 	}
 
 	public static void fillPath() {
-		for(int k = 0; k < Strategy.getStrategy().getProblem().getCodification().getVariableCount(); k++){
-			path.add(k);
+		if (Strategy.getStrategy().getProblem() != null && Strategy.getStrategy().getProblem().getCodification() != null) {
+			for(int k = 0; k < Strategy.getStrategy().getProblem().getCodification().getVariableCount(); k++){
+				path.add(k);
+			}
 		}
 	}
 

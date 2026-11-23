@@ -19,7 +19,10 @@ public class OnePointCrossover extends Crossover {
 	    double number = RandomUtil.nextDouble();	
 		if(number <= PC){
 			//llenar los valores de cada hijo
-			int varCount = Strategy.getStrategy().getProblem().getCodification().getVariableCount() - 1;
+			int varCount = 0;
+			if (Strategy.getStrategy().getProblem() != null && Strategy.getStrategy().getProblem().getCodification() != null) {
+				varCount = Strategy.getStrategy().getProblem().getCodification().getVariableCount() - 1;
+			}
 			int pos = varCount > 0 ? RandomUtil.nextInt(varCount) : 0; 
 			for (int i = 0; i < father1.getCode().size(); i++) {
 				if(i <= pos){

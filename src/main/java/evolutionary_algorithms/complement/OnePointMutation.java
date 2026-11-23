@@ -9,7 +9,7 @@ public class OnePointMutation extends Mutation {
 	@Override
 	public State mutation(State state, double PM) {
 		double probM = RandomUtil.nextDouble();
-		if(PM >= probM)
+		if(PM >= probM && Strategy.getStrategy().getProblem() != null && Strategy.getStrategy().getProblem().getCodification() != null)
 		{
 			Object key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();
 			Object value = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)key);

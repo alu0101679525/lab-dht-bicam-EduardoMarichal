@@ -72,7 +72,9 @@ public class SimulatedAnnealing extends Generator {
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//<State>list=new ArrayList<State>();
 		List<State> neighborhood = new ArrayList<State>();
-		neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceSA, operatornumber);
+		if (Strategy.getStrategy().getProblem() != null && Strategy.getStrategy().getProblem().getOperator() != null) {
+			neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceSA, operatornumber);
+		}
 	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);
 	   // list.add(statecandidate);
 	    return statecandidate;

@@ -16,7 +16,11 @@ public class ProbabilisticSampling extends Sampling {
 		List<State> staList = listState(countInd);
 		for (int i = 0; i < cantV; i++) {
 			Object[] values = new Object[fathers.size()]; // arreglo de valores de una variable
-			Object[] arrtemp = new Object[Strategy.getStrategy().getProblem().getPossibleValue()];
+			int possibleValues = 0;
+			if (Strategy.getStrategy().getProblem() != null) {
+				possibleValues = Strategy.getStrategy().getProblem().getPossibleValue();
+			}
+			Object[] arrtemp = new Object[possibleValues];
 			//llenar el arreglo con todos los valores posibles
 			for (int j = 0; j < arrtemp.length; j++) {
 				arrtemp[j] = j;
@@ -54,7 +58,11 @@ public class ProbabilisticSampling extends Sampling {
 					else p++;
 				}
 				if(find == false){
-					int maxBound = Strategy.getStrategy().getProblem().getCodification().getVariableCount() * 10;
+					int varCount = 1;
+					if (Strategy.getStrategy().getProblem() != null && Strategy.getStrategy().getProblem().getCodification() != null) {
+						varCount = Strategy.getStrategy().getProblem().getCodification().getVariableCount();
+					}
+					int maxBound = varCount * 10;
 					int value = maxBound > 0 ? RandomUtil.nextInt(maxBound) : 0;
 					staList.get(l).getCode().add(value);
 				}

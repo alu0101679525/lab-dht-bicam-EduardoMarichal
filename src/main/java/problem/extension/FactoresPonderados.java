@@ -11,7 +11,9 @@ public class FactoresPonderados extends SolutionMethod {
 
 	@Override
 	public void evaluationState(State state) {
-		// TODO Auto-generated method stub
+		if (Strategy.getStrategy().getProblem() == null || Strategy.getStrategy().getProblem().getFunction() == null) {
+			return;
+		}
 		double eval = 0;       
 		double tempWeight = 0;	
 		ArrayList<Double> evaluation = new ArrayList<Double>(Strategy.getStrategy().getProblem().getFunction().size());

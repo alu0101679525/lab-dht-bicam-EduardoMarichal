@@ -24,7 +24,7 @@ public class Univariate extends Distribution {
 			//para cada valor contar la cantidad de veces que se repite
 			int k = 0;
 			while (k < values.length) {
-				float count = 0;
+				int count = 0;
 				if(values[k] != -1){
 					int l = k;
 					int temp = values[k];
@@ -36,7 +36,7 @@ public class Univariate extends Distribution {
 						l++;	
 					}
 					Probability probability = new Probability();
-					float prob = count / values.length;
+					float prob = (float) count / values.length;
 					probability.setKey(i);
 					probability.setValue(temp);
 					probability.setProbability(prob);
