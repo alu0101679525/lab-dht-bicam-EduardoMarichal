@@ -1,6 +1,11 @@
 var namespaces_dup =
 [
     [ "config", "namespaceconfig.html", "namespaceconfig" ],
+    [ "es", null, [
+      [ "ull", null, [
+        [ "laboratorio", "namespacees_1_1ull_1_1laboratorio.html", "namespacees_1_1ull_1_1laboratorio" ]
+      ] ]
+    ] ],
     [ "evolutionary_algorithms", null, [
       [ "complement", "namespaceevolutionary__algorithms_1_1complement.html", "namespaceevolutionary__algorithms_1_1complement" ]
     ] ],

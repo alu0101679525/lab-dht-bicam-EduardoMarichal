@@ -6,6 +6,13 @@ var annotated_dup =
       ] ],
       [ "RandomUtil", "classconfig_1_1_random_util.html", "classconfig_1_1_random_util" ]
     ] ],
+    [ "es", null, [
+      [ "ull", null, [
+        [ "laboratorio", "namespacees_1_1ull_1_1laboratorio.html", [
+          [ "Main", "classes_1_1ull_1_1laboratorio_1_1_main.html", "classes_1_1ull_1_1laboratorio_1_1_main" ]
+        ] ]
+      ] ]
+    ] ],
     [ "evolutionary_algorithms", null, [
       [ "complement", "namespaceevolutionary__algorithms_1_1complement.html", [
         [ "AIOMutation", "classevolutionary__algorithms_1_1complement_1_1_a_i_o_mutation.html", "classevolutionary__algorithms_1_1complement_1_1_a_i_o_mutation" ],

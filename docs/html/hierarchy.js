@@ -84,6 +84,7 @@ var hierarchy =
       [ "factory_method.FactorySampling", "classfactory__method_1_1_factory_sampling.html", null ]
     ] ],
     [ "metaheuristics.generators.LimitRoulette", "classmetaheuristics_1_1generators_1_1_limit_roulette.html", null ],
+    [ "es.ull.laboratorio.Main", "classes_1_1ull_1_1laboratorio_1_1_main.html", null ],
     [ "problem.extension.MetricasMultiobjetivo", "classproblem_1_1extension_1_1_metricas_multiobjetivo.html", null ],
     [ "evolutionary_algorithms.complement.Mutation", "classevolutionary__algorithms_1_1complement_1_1_mutation.html", [
       [ "evolutionary_algorithms.complement.AIOMutation", "classevolutionary__algorithms_1_1complement_1_1_a_i_o_mutation.html", null ],
