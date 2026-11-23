@@ -28,7 +28,7 @@
         <sonar.projectKey>alu0101679525_lab-dht-bicam-EduardoMarichal</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-        <sonar.coverage.inclusions>**/config/RandomUtil.java,**/factory_interface/FactoryLoader.java,**/local_search/complement/UniformCrossover.java,**/problem/definition/State.java,**/problem/definition/Problem.java,**/problem/extension/MetricasMultiobjetivo.java,**/problem/extension/Dominance.java</sonar.coverage.inclusions>
+        <sonar.coverage.inclusions>**/RandomUtil.java,**/FactoryLoader.java,**/UniformCrossover.java,**/State.java,**/Problem.java,**/MetricasMultiobjetivo.java,**/Dominance.java</sonar.coverage.inclusions>
     </properties>
 
     <dependencies>

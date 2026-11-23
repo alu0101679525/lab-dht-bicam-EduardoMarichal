@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BiCIAM: Referencia de la clase problem.extension.MetricasMultiobjetivo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BiCIAM
+   </div>
+   <div id="projectbrief">Framework para problemas de optimizacion multiobjetivo - Practica 5 LDH</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classproblem_1_1extension_1_1_metricas_multiobjetivo.html','','classproblem_1_1extension_1_1_metricas_multiobjetivo-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase problem.extension.MetricasMultiobjetivo</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a4472830ebe1a6fe8bd33f701316552b1" id="r_a4472830ebe1a6fe8bd33f701316552b1"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a4472830ebe1a6fe8bd33f701316552b1">TasaError</a> (List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt; solutionsFPcurrent, List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt; solutionsFPtrue)</td></tr>
+<tr class="memdesc:a4472830ebe1a6fe8bd33f701316552b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la tasa de error: porcentaje de soluciones del frente aproximado que no pertenecen al frente de Pareto verdadero.  <br /></td></tr>
+<tr class="memitem:a30a03c8819f7191b7bfe09000d33532f" id="r_a30a03c8819f7191b7bfe09000d33532f"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a30a03c8819f7191b7bfe09000d33532f">DistanciaGeneracional</a> (List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt; solutionsFPcurrent, List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt; solutionsFPtrue)</td></tr>
+<tr class="memdesc:a30a03c8819f7191b7bfe09000d33532f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la Distancia Generacional (GD): mide cuán lejos se encuentran las soluciones del frente aproximado respecto al frente de Pareto de referencia.  <br /></td></tr>
+<tr class="memitem:a5ded050edcc046f49548df1cf0ec7449" id="r_a5ded050edcc046f49548df1cf0ec7449"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a5ded050edcc046f49548df1cf0ec7449">Dispersion</a> (ArrayList&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt; solutions)</td></tr>
+<tr class="memdesc:a5ded050edcc046f49548df1cf0ec7449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la dispersión o espaciamiento entre las soluciones del frente obtenido.  <br /></td></tr>
+<tr class="memitem:abfb87540cf1b3680d692821621a2619c" id="r_abfb87540cf1b3680d692821621a2619c"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#abfb87540cf1b3680d692821621a2619c">CalcularMin</a> (ArrayList&lt; Double &gt; allMetrics)</td></tr>
+<tr class="memdesc:abfb87540cf1b3680d692821621a2619c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula el valor mínimo en una lista de métricas.  <br /></td></tr>
+<tr class="memitem:a38ed4658d79ea9d5cfef4bceb7ba5816" id="r_a38ed4658d79ea9d5cfef4bceb7ba5816"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a38ed4658d79ea9d5cfef4bceb7ba5816">CalcularMax</a> (ArrayList&lt; Double &gt; allMetrics)</td></tr>
+<tr class="memdesc:a38ed4658d79ea9d5cfef4bceb7ba5816"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula el valor máximo en una lista de métricas.  <br /></td></tr>
+<tr class="memitem:add9c9a821a254397c6a70d4f56363c0a" id="r_add9c9a821a254397c6a70d4f56363c0a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#add9c9a821a254397c6a70d4f56363c0a">CalcularMedia</a> (ArrayList&lt; Double &gt; allMetrics)</td></tr>
+<tr class="memdesc:add9c9a821a254397c6a70d4f56363c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula el valor medio o promedio en una lista de métricas.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a0baaa7dba3706f16de008d747a7548a1" id="r_a0baaa7dba3706f16de008d747a7548a1"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a0baaa7dba3706f16de008d747a7548a1">Contains</a> (<a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> solA, List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt; solutions)</td></tr>
+<tr class="memdesc:a0baaa7dba3706f16de008d747a7548a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si una solución está contenida en una lista según sus evaluaciones.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a38ed4658d79ea9d5cfef4bceb7ba5816" name="a38ed4658d79ea9d5cfef4bceb7ba5816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ed4658d79ea9d5cfef4bceb7ba5816">&#9670;&#160;</a></span>CalcularMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double problem.extension.MetricasMultiobjetivo.CalcularMax </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; Double &gt;</td>          <td class="paramname"><span class="paramname"><em>allMetrics</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula el valor máximo en una lista de métricas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allMetrics</td><td>Colección de valores numéricos de métricas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Valor máximo encontrado. </dd></dl>
+
+</div>
+</div>
+<a id="add9c9a821a254397c6a70d4f56363c0a" name="add9c9a821a254397c6a70d4f56363c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add9c9a821a254397c6a70d4f56363c0a">&#9670;&#160;</a></span>CalcularMedia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double problem.extension.MetricasMultiobjetivo.CalcularMedia </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; Double &gt;</td>          <td class="paramname"><span class="paramname"><em>allMetrics</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula el valor medio o promedio en una lista de métricas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allMetrics</td><td>Colección de valores numéricos de métricas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Media aritmética de las métricas. </dd></dl>
+
+</div>
+</div>
+<a id="abfb87540cf1b3680d692821621a2619c" name="abfb87540cf1b3680d692821621a2619c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb87540cf1b3680d692821621a2619c">&#9670;&#160;</a></span>CalcularMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double problem.extension.MetricasMultiobjetivo.CalcularMin </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; Double &gt;</td>          <td class="paramname"><span class="paramname"><em>allMetrics</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula el valor mínimo en una lista de métricas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allMetrics</td><td>Colección de valores numéricos de métricas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Valor mínimo encontrado. </dd></dl>
+
+</div>
+</div>
+<a id="a0baaa7dba3706f16de008d747a7548a1" name="a0baaa7dba3706f16de008d747a7548a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0baaa7dba3706f16de008d747a7548a1">&#9670;&#160;</a></span>Contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean problem.extension.MetricasMultiobjetivo.Contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classproblem_1_1definition_1_1_state.html">State</a></td>          <td class="paramname"><span class="paramname"><em>solA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>solutions</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comprueba si una solución está contenida en una lista según sus evaluaciones. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solA</td><td>Solución a buscar. </td></tr>
+    <tr><td class="paramname">solutions</td><td>Lista de soluciones. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si coincide la evaluación, false en caso contrario. </dd></dl>
+
+</div>
+</div>
+<a id="a5ded050edcc046f49548df1cf0ec7449" name="a5ded050edcc046f49548df1cf0ec7449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ded050edcc046f49548df1cf0ec7449">&#9670;&#160;</a></span>Dispersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double problem.extension.MetricasMultiobjetivo.Dispersion </td>
+          <td>(</td>
+          <td class="paramtype">ArrayList&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>solutions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula la dispersión o espaciamiento entre las soluciones del frente obtenido. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solutions</td><td>Lista de soluciones a evaluar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Valor double con la desviación o dispersión del frente. </dd></dl>
+
+</div>
+</div>
+<a id="a30a03c8819f7191b7bfe09000d33532f" name="a30a03c8819f7191b7bfe09000d33532f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a03c8819f7191b7bfe09000d33532f">&#9670;&#160;</a></span>DistanciaGeneracional()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double problem.extension.MetricasMultiobjetivo.DistanciaGeneracional </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>solutionsFPcurrent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>solutionsFPtrue</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula la Distancia Generacional (GD): mide cuán lejos se encuentran las soluciones del frente aproximado respecto al frente de Pareto de referencia. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solutionsFPcurrent</td><td>Frente aproximado actual. </td></tr>
+    <tr><td class="paramname">solutionsFPtrue</td><td>Frente de referencia verdadero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Distancia generacional promedio euclidiana. </dd></dl>
+
+</div>
+</div>
+<a id="a4472830ebe1a6fe8bd33f701316552b1" name="a4472830ebe1a6fe8bd33f701316552b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4472830ebe1a6fe8bd33f701316552b1">&#9670;&#160;</a></span>TasaError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double problem.extension.MetricasMultiobjetivo.TasaError </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>solutionsFPcurrent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="classproblem_1_1definition_1_1_state.html">State</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>solutionsFPtrue</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula la tasa de error: porcentaje de soluciones del frente aproximado que no pertenecen al frente de Pareto verdadero. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solutionsFPcurrent</td><td>Frente de Pareto aproximado obtenido por el algoritmo. </td></tr>
+    <tr><td class="paramname">solutionsFPtrue</td><td>Frente de Pareto de referencia (verdadero). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Valor en el rango [0.0, 1.0] representando la tasa de error. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>src/main/java/problem/extension/<a class="el" href="_metricas_multiobjetivo_8java.html">MetricasMultiobjetivo.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>problem</b></li><li class="navelem"><a href="namespaceproblem_1_1extension.html">extension</a></li><li class="navelem"><a href="classproblem_1_1extension_1_1_metricas_multiobjetivo.html">MetricasMultiobjetivo</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
